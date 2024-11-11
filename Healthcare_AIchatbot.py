@@ -160,7 +160,7 @@ AI Receptionist: "Our clinic opens at 9 AM on Saturdays and closes at 3 PM. Is t
         def initialize_conversation(prompt):
             if 'message' not in st.session_state:
                   st.session_state.message = []
-                st.session_state.message.append({"role": "system", "content": System_Prompt})
+                  st.session_state.message.append({"role": "system", "content": System_Prompt})
 
         initialize_conversation(System_Prompt)
 
