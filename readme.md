@@ -18,9 +18,8 @@ Technologies Used
 
 Project Structure
 
-├── app.py               # Main Streamlit app
-├── patients.csv         # Example patient dataset
-├── patients_index.faiss # Pre-built FAISS index (optional, generated in setup)
+├── Healthcare_AIchatbot.py               # Main Streamlit app
+├── Database.csv         # Example patient dataset
 ├── README.md            # Project documentation
 └── requirements.txt     # Python dependencies
 
@@ -28,7 +27,7 @@ Installation
 
     Clone the repository:
 
-git clone https://github.com/your-username/AI-Receptionist-Chatbot.git
+git clone https://github.com/11andrea2233/RAG-Healthcare-Database.git
 cd AI-Receptionist-Chatbot
 
 Install dependencies:
@@ -56,7 +55,7 @@ Run the following code snippet to create embeddings for the dataset and save the
     import numpy as np
 
     # Load the dataset
-    df = pd.read_csv('patients.csv')
+    df = pd.read_csv('Database.csv')
 
     # Create embeddings for each row
     def embed_text(text):
@@ -71,8 +70,6 @@ Run the following code snippet to create embeddings for the dataset and save the
     embeddings = np.array(df['embeddings'].tolist()).astype('float32')
     index.add(embeddings)
 
-    # Save FAISS index
-    faiss.write_index(index, "patients_index.faiss")
 
 Usage
 
@@ -108,12 +105,3 @@ Contributions are welcome! To contribute:
     Commit your changes: git commit -m 'Add some feature'
     Push to the branch: git push origin feature/your-feature
     Submit a pull request.
-
-License
-
-This project is licensed under the MIT License. See LICENSE for details.
-Acknowledgments
-
-    OpenAI for their powerful language models.
-    FAISS for fast similarity search capabilities.
-    Streamlit for making web app deployment easy.
