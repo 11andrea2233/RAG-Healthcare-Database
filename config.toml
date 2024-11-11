@@ -1,0 +1,6 @@
+[theme]
+base = "light"
+primaryColor = "#4950BC"
+backgroundColor = "#FFFFFF"
+textColor = "#272525"
+font = "Roboto Slab"
