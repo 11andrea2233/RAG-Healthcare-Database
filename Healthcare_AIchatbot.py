@@ -171,7 +171,7 @@ AI Receptionist: "Our clinic opens at 9 AM on Saturdays and closes at 3 PM. Is t
                 with st.chat_message(messages["role"]):
                     st.markdown(messages["content"])
 
-        if user_message := st.chat_input("I can only answer questions related to healthcare"):
+        if user_message := st.chat_input("How can I assist you today?"):
             with st.chat_message("user"):
                 st.markdown(user_message)
             st.session_state.message.append({"role": "user", "content": user_message})
