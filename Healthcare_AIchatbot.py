@@ -159,9 +159,9 @@ AI Receptionist: "Our clinic opens at 9 AM on Saturdays and closes at 3 PM. Is t
         
         def initialize_conversation(prompt):
             if 'message' not in st.session_state:
-                st.session_state.message = []
+                st.session_state.message =[]
                 st.session_state.message.append({"role": "system", "content": System_Prompt})
-
+    
         initialize_conversation(System_Prompt)
 
         for messages in st.session_state.message:
@@ -171,7 +171,7 @@ AI Receptionist: "Our clinic opens at 9 AM on Saturdays and closes at 3 PM. Is t
                 with st.chat_message(messages["role"]):
                     st.markdown(messages["content"])
 
-        if user_message := st.chat_input("I can only answer questions related to healthcare"):
+        if user_message := st.chat_input("How can I help you today?"):
             with st.chat_message("user"):
                 st.markdown(user_message)
             st.session_state.message.append({"role": "user", "content": user_message})
