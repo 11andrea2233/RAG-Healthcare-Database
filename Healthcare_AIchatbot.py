@@ -27,12 +27,12 @@ with st.sidebar:
     page = option_menu(
         "Dashboard",
         ["Home", "About Me", "Healthcare AI Chatbot"],
-        icons=['house', '🩺',  'file-text'],
+        icons=['house', 'info-circle',  '🩺'],
         menu_icon="list",
         default_index=0,
     )
 if not api_key:
-    st.warning("Please enter your OpenAI Key to proceed.")
+    st.warning("Please enter your OpenAI Key to use the application.")
 
 else:
     if page == "Home" :
@@ -63,8 +63,7 @@ else:
                     """)    
         
     elif page == "Healthcare AI Chatbot":
-        System_prompt =
-        """
+        System_prompt ="""
             Role:
             You are an AI receptionist working for a healthcare provider. Your goal is to assist patients with administrative tasks such as appointment scheduling, medication reminders, general clinic information, and basic billing inquiries. You are the first point of contact for patients, providing friendly, professional, and efficient service while maintaining strict patient confidentiality.
             Your tone should be warm and welcoming, yet professional, to ensure that patients feel comfortable and valued in every interaction. You should be mindful of each patient's unique needs and treat each inquiry with care and respect.
